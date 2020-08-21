@@ -17,3 +17,7 @@ The program allows you to specify the file name of the ensuing file.
 
 This program will only work on Windows. An executable could be derived from the included source file for other operating systems if you have the know-how.
 
+## Noted issues:
+
+Tested with combining 11 textbooks together. Encountered a fatal error that has not yet been explored.
+Could just be an issue of size.
