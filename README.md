@@ -15,3 +15,5 @@ A simple program for combining PDFs within a folder that I created for my buddy 
 Simply move the .exe file into the folder that contains your pdfs. Run the .exe and it will combine the pdfs.
 The program allows you to specify the file name of the ensuing file.
 
+This program will only work on Windows. An executable could be derived from the included source file for other operating systems if you have the know-how.
+
