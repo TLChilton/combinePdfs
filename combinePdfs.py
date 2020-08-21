@@ -1,6 +1,6 @@
 #! python3
 # combinePdfs.py
-import PyPDF2, os
+import PyPDF2, os, traceback
 from colorama import init
 init()
 
@@ -33,10 +33,16 @@ if (pdfFiles):
         if savedFile.endswith('.pdf') == False:
             savedFile = savedFile + '.pdf'
         savedFile = os.path.abspath(savedFile)
-    print('Combined pdf saved as ' + savedFile)
-    pdfOutput = open(savedFile, 'wb')
-    pdfWriter.write(pdfOutput)
-    pdfOutput.close()
+    print('Combined pdf saving as ' + savedFile)
+    try:
+        pdfOutput = open(savedFile, 'wb')
+        pdfWriter.write(pdfOutput)
+        pdfOutput.close()
+    except:
+        errorFile = open('errorInfo.txt', 'w')
+        errorFile.write(traceback.format_exc())
+        errorFile.close()
+        print('\u001b[91mFatal error encountered. Traceback info written to errorInfo.txt.\u001b[0m')
     print('Hit enter to close')
     input()
 else:
