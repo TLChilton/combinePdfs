@@ -1,5 +1,6 @@
 #! python3
 # combinePdfs.py
+# Created by Thomas Chilton
 import PyPDF2, os, traceback
 from colorama import init
 init()
