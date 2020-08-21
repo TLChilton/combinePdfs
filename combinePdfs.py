@@ -36,7 +36,7 @@ if (pdfFiles): # if pdfs exist
     savedFile = os.path.abspath(savedFile)
     # If the file name already exists ask the user for a new one
     while os.path.exists(savedFile):
-        print('\u001b[95mERROR: ' + savedFile + ' already exists, \nPlease enter a new name: \u001b[0m', end= '')
+        print('\u001b[95mERROR: \u001b[93m' + savedFile + ' already exists, \n\u001b[95mPlease enter a new name: \u001b[0m', end= '')
         savedFile = input()
         if savedFile.endswith('.pdf') == False:
             savedFile = savedFile + '.pdf'
